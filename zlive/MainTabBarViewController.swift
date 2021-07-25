@@ -17,6 +17,9 @@ class MainTabBarViewController: UITabBarController {
         let meImg : UIImage? = UIImage.init(named: "我的.png")
         meVC.tabBarItem = UITabBarItem.init(title: "我的", image: setTabBarItemImg(img: meImg), selectedImage: nil)
         self.viewControllers = [homeVC, meVC]
+        
+        // 修改tabbar的选中颜色
+        UITabBar.appearance().tintColor = UIColor.orange
     }
 }
 
