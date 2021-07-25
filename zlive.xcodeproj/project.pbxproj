@@ -16,6 +16,7 @@
 		2B15321726AAF1C300F80A51 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15321626AAF1C300F80A51 /* HomeViewController.swift */; };
 		2B15321926AAF1ED00F80A51 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15321826AAF1ED00F80A51 /* MainTabBarViewController.swift */; };
 		2B15330F26AB057000F80A51 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15330E26AB057000F80A51 /* MeViewController.swift */; };
+		DB9E65D3AC65B2A18B545A44 /* Pods_zlive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F7D13C8CC97CC16DF48DD4 /* Pods_zlive.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		2B15321626AAF1C300F80A51 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2B15321826AAF1ED00F80A51 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		2B15330E26AB057000F80A51 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		9171594224A59A71DD0C20BF /* Pods-zlive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zlive.debug.xcconfig"; path = "Target Support Files/Pods-zlive/Pods-zlive.debug.xcconfig"; sourceTree = "<group>"; };
+		9380BF889FB12C5F4BC4E8C6 /* Pods-zlive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zlive.release.xcconfig"; path = "Target Support Files/Pods-zlive/Pods-zlive.release.xcconfig"; sourceTree = "<group>"; };
+		D8F7D13C8CC97CC16DF48DD4 /* Pods_zlive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zlive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9E65D3AC65B2A18B545A44 /* Pods_zlive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				2B15320126AAEE5900F80A51 /* zlive */,
 				2B15320026AAEE5900F80A51 /* Products */,
+				41D44C81A2CFAD2A121659DD /* Pods */,
+				CC34A2A8DA4463C32E099810 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,24 @@
 			path = zlive;
 			sourceTree = "<group>";
 		};
+		41D44C81A2CFAD2A121659DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9171594224A59A71DD0C20BF /* Pods-zlive.debug.xcconfig */,
+				9380BF889FB12C5F4BC4E8C6 /* Pods-zlive.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CC34A2A8DA4463C32E099810 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8F7D13C8CC97CC16DF48DD4 /* Pods_zlive.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B15321326AAEE5A00F80A51 /* Build configuration list for PBXNativeTarget "zlive" */;
 			buildPhases = (
+				08C4B292F9C5CEC3DD1F74F8 /* [CP] Check Pods Manifest.lock */,
 				2B1531FB26AAEE5900F80A51 /* Sources */,
 				2B1531FC26AAEE5900F80A51 /* Frameworks */,
 				2B1531FD26AAEE5900F80A51 /* Resources */,
+				4C049D66A98BA23D0A5C511D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08C4B292F9C5CEC3DD1F74F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zlive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C049D66A98BA23D0A5C511D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zlive/Pods-zlive-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zlive/Pods-zlive-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zlive/Pods-zlive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B1531FB26AAEE5900F80A51 /* Sources */ = {
@@ -295,6 +364,7 @@
 		};
 		2B15321426AAEE5A00F80A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9171594224A59A71DD0C20BF /* Pods-zlive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +384,7 @@
 		};
 		2B15321526AAEE5A00F80A51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9380BF889FB12C5F4BC4E8C6 /* Pods-zlive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
