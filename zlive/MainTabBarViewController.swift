@@ -10,16 +10,26 @@ import UIKit
 class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 首页
         let homeVC : HomeViewController = HomeViewController()
-        let homeImg : UIImage? = UIImage.init(named: "首页.png")
-        homeVC.tabBarItem = UITabBarItem.init(title: "首页", image: setTabBarItemImg(img: homeImg), selectedImage: nil)
+        addChildViewControllerToTabBar(vc: homeVC, vcTitle: "首页", vcImg: "首页.png", selectedImg: "")
+        // 我的
         let meVC : MeViewController = MeViewController()
-        let meImg : UIImage? = UIImage.init(named: "我的.png")
-        meVC.tabBarItem = UITabBarItem.init(title: "我的", image: setTabBarItemImg(img: meImg), selectedImage: nil)
-        self.viewControllers = [homeVC, meVC]
+        addChildViewControllerToTabBar(vc: meVC, vcTitle: "我的", vcImg: "我的.png", selectedImg: "")
         
         // 修改tabbar的选中颜色
         UITabBar.appearance().tintColor = UIColor.orange
+    }
+    
+    // 添加子控制器到底bar
+    func addChildViewControllerToTabBar(vc : UIViewController,
+                                        vcTitle : String,
+                                        vcImg : String,
+                                        selectedImg : String) {
+        let img : UIImage? = UIImage.init(named: vcImg)
+        let selectImg : UIImage? = UIImage.init(named: selectedImg)
+        vc.tabBarItem = UITabBarItem.init(title: vcTitle, image: setTabBarItemImg(img: img), selectedImage: setTabBarItemImg(img: selectImg))
+        self.addChild(vc)
     }
 }
 
