@@ -18,17 +18,20 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "首页"
         self.view.backgroundColor = UIColor.white
         
-        self.title = "首页"
+        self.setupUI()
         self.configUI()
     }
 }
 
 extension HomeViewController {
-    func configUI() {
+    func setupUI() {
         self.view.addSubview(tableView)
-        
+    }
+    
+    func configUI() {
         tableView.snp.makeConstraints { make in
             make.left.top.right.equalTo(self.view)
             make.height.equalTo(800)
