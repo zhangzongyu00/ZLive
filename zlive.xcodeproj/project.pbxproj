@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -69,6 +69,8 @@
 		2B15320126AAEE5900F80A51 /* zlive */ = {
 			isa = PBXGroup;
 			children = (
+				2B47D34626AEF19D001375B8 /* Mine */,
+				2B47D34526AEF15A001375B8 /* HomePage */,
 				2B15320226AAEE5900F80A51 /* AppDelegate.swift */,
 				2B15320426AAEE5900F80A51 /* SceneDelegate.swift */,
 				2B15320626AAEE5900F80A51 /* ViewController.swift */,
@@ -76,11 +78,25 @@
 				2B15320B26AAEE5900F80A51 /* Assets.xcassets */,
 				2B15320D26AAEE5A00F80A51 /* LaunchScreen.storyboard */,
 				2B15321026AAEE5A00F80A51 /* Info.plist */,
-				2B15321626AAF1C300F80A51 /* HomeViewController.swift */,
 				2B15321826AAF1ED00F80A51 /* MainTabBarViewController.swift */,
-				2B15330E26AB057000F80A51 /* MeViewController.swift */,
 			);
 			path = zlive;
+			sourceTree = "<group>";
+		};
+		2B47D34526AEF15A001375B8 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				2B15321626AAF1C300F80A51 /* HomeViewController.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		2B47D34626AEF19D001375B8 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				2B15330E26AB057000F80A51 /* MeViewController.swift */,
+			);
+			path = Mine;
 			sourceTree = "<group>";
 		};
 		41D44C81A2CFAD2A121659DD /* Pods */ = {
@@ -89,7 +105,6 @@
 				9171594224A59A71DD0C20BF /* Pods-zlive.debug.xcconfig */,
 				9380BF889FB12C5F4BC4E8C6 /* Pods-zlive.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -369,7 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K89YU52N46;
+				DEVELOPMENT_TEAM = F8QVARQG5D;
 				INFOPLIST_FILE = zlive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

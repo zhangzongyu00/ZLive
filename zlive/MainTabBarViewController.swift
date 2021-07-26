@@ -12,10 +12,13 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         // 首页
         let homeVC : HomeViewController = HomeViewController()
-        addChildViewControllerToTabBar(vc: homeVC, vcTitle: "首页", vcImg: "首页.png", selectedImg: "")
+        let homeNav = UINavigationController(rootViewController: homeVC)
+        addChildViewControllerToTabBar(vc: homeNav, vcTitle: "首页", vcImg: "首页.png", selectedImg: "")
         // 我的
         let meVC : MeViewController = MeViewController()
-        addChildViewControllerToTabBar(vc: meVC, vcTitle: "我的", vcImg: "我的.png", selectedImg: "")
+        let meNav = UINavigationController(rootViewController: meVC)
+        meNav.isNavigationBarHidden = true
+        addChildViewControllerToTabBar(vc: meNav, vcTitle: "我的", vcImg: "我的.png", selectedImg: "")
         
         // 修改tabbar的选中颜色
         UITabBar.appearance().tintColor = UIColor.orange
