@@ -14,6 +14,10 @@ class MainTabBarViewController: UITabBarController {
         let homeVC : HomeViewController = HomeViewController()
         let homeNav = UINavigationController(rootViewController: homeVC)
         addChildViewControllerToTabBar(vc: homeNav, vcTitle: "首页", vcImg: "首页.png", selectedImg: "")
+        // 直播
+        let liveVC : LiveViewController = LiveViewController()
+        let liveNav = UINavigationController(rootViewController: liveVC)
+        addChildViewControllerToTabBar(vc: liveNav, vcTitle: "直播", vcImg: "实拍.png", selectedImg: "")
         // 我的
         let meVC : MeViewController = MeViewController()
         let meNav = UINavigationController(rootViewController: meVC)

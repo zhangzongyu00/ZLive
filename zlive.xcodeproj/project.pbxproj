@@ -16,6 +16,7 @@
 		2B15321726AAF1C300F80A51 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15321626AAF1C300F80A51 /* HomeViewController.swift */; };
 		2B15321926AAF1ED00F80A51 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15321826AAF1ED00F80A51 /* MainTabBarViewController.swift */; };
 		2B15330F26AB057000F80A51 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15330E26AB057000F80A51 /* MeViewController.swift */; };
+		2BADEFEF26AFCE1F00F50C85 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BADEFEE26AFCE1F00F50C85 /* LiveViewController.swift */; };
 		DB9E65D3AC65B2A18B545A44 /* Pods_zlive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F7D13C8CC97CC16DF48DD4 /* Pods_zlive.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		2B15321626AAF1C300F80A51 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2B15321826AAF1ED00F80A51 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		2B15330E26AB057000F80A51 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		2BADEFEE26AFCE1F00F50C85 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		9171594224A59A71DD0C20BF /* Pods-zlive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zlive.debug.xcconfig"; path = "Target Support Files/Pods-zlive/Pods-zlive.debug.xcconfig"; sourceTree = "<group>"; };
 		9380BF889FB12C5F4BC4E8C6 /* Pods-zlive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zlive.release.xcconfig"; path = "Target Support Files/Pods-zlive/Pods-zlive.release.xcconfig"; sourceTree = "<group>"; };
 		D8F7D13C8CC97CC16DF48DD4 /* Pods_zlive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zlive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				2B47D34626AEF19D001375B8 /* Mine */,
+				2BADEFED26AFCDF400F50C85 /* Live */,
 				2B47D34526AEF15A001375B8 /* HomePage */,
 				2B15320226AAEE5900F80A51 /* AppDelegate.swift */,
 				2B15320426AAEE5900F80A51 /* SceneDelegate.swift */,
@@ -97,6 +100,14 @@
 				2B15330E26AB057000F80A51 /* MeViewController.swift */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		2BADEFED26AFCDF400F50C85 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				2BADEFEE26AFCE1F00F50C85 /* LiveViewController.swift */,
+			);
+			path = Live;
 			sourceTree = "<group>";
 		};
 		41D44C81A2CFAD2A121659DD /* Pods */ = {
@@ -232,6 +243,7 @@
 			files = (
 				2B15330F26AB057000F80A51 /* MeViewController.swift in Sources */,
 				2B15321926AAF1ED00F80A51 /* MainTabBarViewController.swift in Sources */,
+				2BADEFEF26AFCE1F00F50C85 /* LiveViewController.swift in Sources */,
 				2B15320726AAEE5900F80A51 /* ViewController.swift in Sources */,
 				2B15320326AAEE5900F80A51 /* AppDelegate.swift in Sources */,
 				2B15320526AAEE5900F80A51 /* SceneDelegate.swift in Sources */,

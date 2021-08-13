@@ -9,8 +9,8 @@ import UIKit
 
 class MeViewController: UIViewController {
     // 添加一个UIScrollView
-    private lazy var scrollView : UIScrollView = {
-        let view = UIScrollView()
+    private lazy var tableView : UITableView = {
+        let view = UITableView()
         view.backgroundColor = UIColor.blue
         return view
     }()
@@ -30,12 +30,13 @@ class MeViewController: UIViewController {
 
 extension MeViewController {
     func setupUI() {
-        self.view.addSubview(scrollView)
-        self.scrollView.addSubview(userInfoArea)
+        self.view.addSubview(tableView)
+        self.tableView.tableHeaderView = userInfoArea
+//        self.tableView.addSubview(userInfoArea)
     }
     
     func configUI() {
-        scrollView.snp.makeConstraints { make in
+        tableView.snp.makeConstraints { make in
             make.left.top.right.equalTo(self.view)
             make.height.equalTo(1800)
         }
